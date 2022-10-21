@@ -1,6 +1,7 @@
 // Les opérateurs
+// 🚀 throwAllUsersErrors
 // http://localhost:3000/alone/final/01.bonus-1.ts
-// 1. 🚀 throwAllUsersErrors
+
 //
 // ❌ NE PAS MODIFIER
 // Utilitaire ne faisant pas partie de l'exercice

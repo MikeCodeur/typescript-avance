@@ -1,5 +1,6 @@
 // Discriminated union & Narrowing
-// http://localhost:3000/alone/final/02.ts
+// 🚀 Narrowing
+// http://localhost:3000/alone/final/03.bonus-1.ts
 
 // ❌ NE PAS MODIFIER
 import displayText, {init} from './helper/exerciseHelper'
@@ -19,8 +20,6 @@ type PHPDev = {
   langage: 'PHP'
   framework: string[]
 }
-
-type Developper = JavaDev | JSDev | PHPDev
 
 function helloDeveloppeur(dev: Developper) {
   if (dev.langage === 'JAVA') {
@@ -46,6 +45,31 @@ const devPHP: PHPDev = {
 displayText(`${helloDeveloppeur(devJava)}`)
 displayText(`${helloDeveloppeur(devJs)}`)
 displayText(`${helloDeveloppeur(devPHP)}`)
+
+type BlockChainDev = {
+  langage: string
+  framework: string[]
+  cryptoBlockChain: string
+}
+
+//Narrowing
+type Developper = JavaDev | JSDev | PHPDev | BlockChainDev
+
+function helloDeveloppeurWeb3(dev: Developper) {
+  if ('cryptoBlockChain' in dev) {
+    return 'Hello WEB 3 developpeur'
+  } else {
+    return 'Hello normal developpeur'
+  }
+}
+
+const ethDev: BlockChainDev = {
+  langage: 'JAVASCRIPT',
+  framework: ['React', 'Solidity'],
+  cryptoBlockChain: 'ETH',
+}
+displayText(`${helloDeveloppeurWeb3(devJava)}`)
+displayText(`${helloDeveloppeurWeb3(ethDev)}`)
 
 /*eslint
   @typescript-eslint/no-unused-vars: "off"

@@ -1,6 +1,7 @@
 // Intersections - Unions
-// http://localhost:3000/alone/final/02.bonus-2.ts
 // 🚀 Union
+// http://localhost:3000/alone/final/02.bonus-2.ts
+
 // ❌ NE PAS MODIFIER
 import displayText, {init} from './helper/exerciseHelper'
 init()

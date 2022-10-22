@@ -5,8 +5,8 @@
 import displayText, {init} from './helper/exerciseHelper'
 init()
 
-function printBirthDay(timestamp: Date): string
-function printBirthDay(timestamp: string): string
+function printBirthDay(inputDate: Date): string
+function printBirthDay(inputDate: string): string
 function printBirthDay(inputDate: string | Date): string {
   if (inputDate instanceof Date) {
     return inputDate.toLocaleDateString()

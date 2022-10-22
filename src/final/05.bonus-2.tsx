@@ -1,5 +1,5 @@
 // Overloads
-// 🚀 Nombre de  paramètres variables
+// 🚀 type de retour différent
 // http://localhost:3000/alone/final/02.ts
 
 // ❌ NE PAS MODIFIER
@@ -11,11 +11,11 @@ type InputDate = string | number | Date
 function printBirthDay(year: number, month: number, day: number): string
 function printBirthDay(year: number, month: number): string
 function printBirthDay(year: number): string
-function printBirthDay(inputDate: Date): string
+function printBirthDay(inputDate: Date): Date
 function printBirthDay(inputDate: string): string
-function printBirthDay(inputDate: InputDate, m?: number, d?: number): string {
+function printBirthDay(inputDate: InputDate, m?: number, d?: number) {
   if (inputDate instanceof Date) {
-    return inputDate.toLocaleDateString()
+    return inputDate
   } else if (typeof inputDate === 'string') {
     return new Date(inputDate).toLocaleDateString()
   } else if (d !== undefined && m !== undefined) {
@@ -30,7 +30,7 @@ function printBirthDay(inputDate: InputDate, m?: number, d?: number): string {
 }
 
 displayText(`${printBirthDay('October 13, 2014')}`)
-displayText(`${printBirthDay(new Date(2014, 9, 13))}`)
+displayText(`${printBirthDay(new Date(2014, 9, 13)).toLocaleDateString()}`)
 displayText(`${printBirthDay(2014, 9, 13)}`)
 displayText(`${printBirthDay(2014, 9)}`)
 displayText(`${printBirthDay(2014)}`)

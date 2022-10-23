@@ -35,3 +35,7 @@ class Game {
 //     mario.isPC() ? ' oui' : 'non'
 //   }`,
 // )
+
+/*eslint
+  @typescript-eslint/no-unused-vars: "off"
+*/

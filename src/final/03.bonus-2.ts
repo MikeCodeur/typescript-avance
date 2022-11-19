@@ -9,16 +9,19 @@ init()
 type JavaDev = {
   langage: 'JAVA'
   framework: string[]
+  javaTools: string
 }
 
 type JSDev = {
   langage: 'JAVASCRIPT'
   framework: string[]
+  jsTools: string
 }
 
 type PHPDev = {
   langage: 'PHP'
   framework: string[]
+  phpTools: string
 }
 
 function assertNever(): never {
@@ -26,28 +29,34 @@ function assertNever(): never {
 }
 
 function helloDeveloppeur(dev: Developper) {
-  switch (dev.langage) {
-    case 'JAVA':
-      return 'Hello developpeur Java'
-    case 'JAVASCRIPT':
-      return 'Hello developpeur JavaScript'
-    case 'PHP':
-      return 'Hello developpeur PHP'
-    default:
+  if ('cryptoBlockChain' in dev) {
+    return `Hello developpeur Blockchain ${dev.cryptoBlockChain}`
+  } else {
+    if (dev.langage === 'JAVA') {
+      return `Hello developpeur Java ${dev.javaTools}`
+    } else if (dev.langage === 'JAVASCRIPT') {
+      return `Hello developpeur JavaScript ${dev.jsTools}`
+    } else if (dev.langage === 'PHP') {
+      return `Hello developpeur PHP ${dev.phpTools}`
+    } else {
       return assertNever()
+    }
   }
 }
 const devJava: JavaDev = {
   langage: 'JAVA',
   framework: ['spring', 'spring boot'],
+  javaTools: 'JDK',
 }
 const devJs: JSDev = {
   langage: 'JAVASCRIPT',
   framework: ['React', 'Vue'],
+  jsTools: 'Postman',
 }
 const devPHP: PHPDev = {
   langage: 'PHP',
   framework: ['React', 'Vue'],
+  phpTools: 'PHPdebug',
 }
 displayText(`${helloDeveloppeur(devJava)}`)
 displayText(`${helloDeveloppeur(devJs)}`)
@@ -68,22 +77,13 @@ type BlockChainDev = {
 //Narrowing
 type Developper = JavaDev | JSDev | PHPDev | BlockChainDev
 
-function helloDeveloppeurWeb3(dev: Developper) {
-  if ('cryptoBlockChain' in dev) {
-    return 'Hello WEB 3 developpeur'
-  } else {
-    return 'Hello normal developpeur'
-  }
-}
-
 const ethDev: BlockChainDev = {
   langage: 'JAVASCRIPT',
   framework: ['React', 'Solidity'],
   cryptoBlockChain: 'ETH',
 }
-displayText(`${helloDeveloppeurWeb3(devJava)}`)
-displayText(`${helloDeveloppeurWeb3(ethDev)}`)
-
+displayText(`${helloDeveloppeur(devJava).trim()}`)
+displayText(`${helloDeveloppeur(ethDev).trim()}`)
 /*eslint
   @typescript-eslint/no-unused-vars: "off"
 */

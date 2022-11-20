@@ -1,4 +1,4 @@
-// Générics
+// Classes - Shorthand - Visibilité
 // http://localhost:3000/alone/final/02.ts
 
 // ❌ NE PAS MODIFIER

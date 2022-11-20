@@ -1,4 +1,5 @@
-// Générics
+// Classes - Shorthand - Visibilité
+// 🚀 Champs Protected
 // http://localhost:3000/alone/final/02.ts
 
 // ❌ NE PAS MODIFIER

@@ -10,16 +10,19 @@ init()
 type JavaDev = {
   langage: 'JAVA'
   framework: string[]
+  javaTools: string
 }
 
 type JSDev = {
   langage: 'JAVASCRIPT'
   framework: string[]
+  jsTools: string
 }
 
 type PHPDev = {
   langage: 'PHP'
   framework: string[]
+  phpTools: string
 }
 // 🐶 créé le type 'Developper' qui est l'union des 3 types de dev ci-dessus
 

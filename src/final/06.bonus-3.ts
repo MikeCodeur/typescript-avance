@@ -1,5 +1,5 @@
 // Générics
-// 🚀 fabriquer une Paire
+// 🚀 limitation avec T extends
 // http://localhost:3000/alone/final/02.ts
 
 // ❌ NE PAS MODIFIER

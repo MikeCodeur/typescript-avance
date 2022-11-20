@@ -1,5 +1,5 @@
 // Générics
-// 🚀 fabriquer une Paire
+// 🚀 combinaison
 // http://localhost:3000/alone/final/02.ts
 
 // ❌ NE PAS MODIFIER

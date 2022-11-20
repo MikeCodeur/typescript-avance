@@ -8,7 +8,7 @@ init()
 
 // ✔️ Début de l'exercice
 
-// 🐶 Modifie le type Configuration pour que 'data' soit soit générique et que puisse
+// 🐶 Modifie le type Configuration pour que 'data' soit générique et que l'on puisse
 // y mettre un array de Type (array de string, array de number etc ...)
 type Configuration = {
   name: string
